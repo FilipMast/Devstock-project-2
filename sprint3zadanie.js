@@ -23,22 +23,17 @@ console.log(c);
 const surname = "Filip Mastrzykowski";
 // h) Zainicjalizuj zmienną z liczbą zmiennoprzecinkową.
 const num2 = 1.5;
-
 // i) Zadeklaruj zmienną i przypisz do niej wynik działania matematycznego (np. dodawanie).
 const d = 2 + 8;
 console.log(d);
 // j) Stwórz zmienną przechowującą twoje miasto jako ciąg znaków.
-let city = Kraków;
-
+let city = "K" + "R" + "A" + "K" + "Ó" + "W";
+console.log(city);
 // Zadania z Prostych i Złożonych Typów Danych
 // a) Utwórz tablicę zawierającą trzy różne typy danych.
 const arr = [1, "string", {}];
 // b) Stwórz obiekt car z właściwościami make, model i year.
-const car = {
-  make: "Lexus",
-  model: "RC 200T",
-  year: 2017,
-};
+const car = { make: 1, model: 2, year: 3 };
 // c) Zadeklaruj tablicę z trzema różnymi wartościami liczbowymi.
 const arr2 = [1, 2, 3];
 // d) Utwórz obiekt reprezentujący osobę, zawierający klucze name, age i isStudent (boolean).
@@ -48,7 +43,7 @@ const person2 = {
   isStudent: false,
 };
 // e) Zadeklaruj zmienną przechowującą pusty obiekt, a następnie dodaj do niego klucz color z wartością typu string.
-const emptyObj = {};
+let emptyObj = {};
 emptyObj = { color: "red" };
 console.log(emptyObj);
 // f) Stwórz tablicę obiektów, gdzie każdy obiekt reprezentuje zwierzę z kluczami name (string) i age (number).
@@ -81,22 +76,23 @@ if (num > 10) {
 }
 // b) Stwórz warunek if, który sprawdzi, czy zmienna tekstowa jest równa "Hello".
 const text = "noHello";
-if (text == "Hello") {
+if (text === "Hello") {
   console.log("Zmienna jest równa Hello");
 } else {
   console.log("Zmienna nie jest równa Hello");
 }
 // c) Użyj operatora ternarnego do przypisania do zmiennej wartości w zależności od innego warunku logicznego.
 const legs = 2;
-let numOfLegs = legs == 2 ? true : false;
+let numOfLegs = legs == 2 ? "ma dwie nogi" : false;
 console.log(numOfLegs);
 // d) Napisz warunek, który sprawdzi, czy zmienna age jest większa lub równa 18.
+let age = 19;
 const checkAge = age >= 18 ? true : false;
 //lub
 if (age >= 18) {
-  console.log("Wartość jest wyższa niż: " + age);
+  console.log("Wartość wynosi: " + age + " lat");
 } else {
-  console.log("Wartość jest niższa niż: " + age);
+  console.log("Wartość jest niższa niż 18 ");
 }
 // e) Stwórz warunek if-else, który sprawdzi, czy tablica jest pusta.
 const newArr = [];
@@ -106,13 +102,34 @@ if (newArr.length == 0) {
   console.log("Tablica nie jest pusta");
 }
 // f) Użyj operatora ternarnego do sprawdzenia, czy zmienna isMember jest prawdziwa, i na tej podstawie przypisz rabat.
-
+let isMember = true;
+const rabat = "10%";
+const addRabat =
+  isMember == true ? "Przypisz rabat " + rabat : "Nie dostaniesz rabatu";
+console.log(addRabat);
 // g) Napisz warunek if, który sprawdzi, czy długość ciągu znaków w zmiennej jest większa niż 5.
+const count = "Filipp";
+if (count.length > 5) {
+  console.log("Znaków jest więcej niż 5");
+}
 // h) Stwórz warunek if-else, który sprawdzi, czy liczba jest parzysta lub nieparzysta.
+const newNumer = 11;
+if (newNumer % 2 === 0) {
+  console.log("Liczba jest parzysta");
+} else {
+  console.log("liczba nie jest parzysta");
+}
 // i) Użyj operatora ternarnego do wyboru między dwoma różnymi wartościami tekstowymi w zależności od warunku.
+const x = "Królik";
+const y = "Marchewka";
+const z =
+  (x == "Królik" || z == "Kot") && (y == "Marchewka" || y == "woda")
+    ? "jest zwierzę i ma co jeść"
+    : "Sprawdź!";
+console.log(z);
 // j) Napisz warunek if, który sprawdzi, czy obiekt ma określony klucz.
 const obj2 = {
-  name: "",
+  name: "Tower",
   age: 12,
 };
 
